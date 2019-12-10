@@ -3,7 +3,7 @@ const $lastLi = $('li.last')
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)    //读取要变成JSON对象进行操作
 
-const hashMap = (xObject[0] === undefined) ? [{ logo: 'A', url: 'https://www.acfun.cn' }, { logo: 'B', url: 'https://www.bilibili.com' }] : xObject
+const hashMap = (xObject === null) ? [{ logo: 'A', url: 'https://www.acfun.cn' }, { logo: 'B', url: 'https://www.bilibili.com' }] : xObject
 
 const simplifyUrl = (url) => {
     return url.replace('https://', '')
