@@ -123,7 +123,6 @@ var $lastLi = $('li.last');
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x); //读取要变成JSON对象进行操作
 
-console.log(xObject[0]);
 var hashMap = xObject[0] === null ? [{
   logo: 'A',
   url: 'https://www.acfun.cn'
@@ -186,4 +185,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ef3214e4.js.map
+//# sourceMappingURL=main.33d9be38.js.map
