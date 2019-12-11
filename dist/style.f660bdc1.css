@@ -16,10 +16,15 @@ body{background: #ffffff;
      background-image: url(daitu1.3b043b48.png);
      background-repeat: no-repeat;
      background-position:center;
-     background-size: 78% auto;
+    background-size: cover;
+     
 }
 
 @media (min-width:500px){
+body{
+        background-size: 78% auto;
+
+}
 .globalHeader{
     max-width: 400px;
     margin-right: auto;
@@ -129,4 +134,4 @@ body{background: #ffffff;
     
 }
 
-/*# sourceMappingURL=style.07c24bef.css.map */
+/*# sourceMappingURL=style.f660bdc1.css.map */
