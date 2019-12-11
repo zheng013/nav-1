@@ -1,9 +1,8 @@
 const $siteList = $('.siteList')
 const $lastLi = $('li.last')
-const x = localStorage.getItem('x')
-const xObject = JSON.parse(x)    //读取要变成JSON对象进行操作
-console.log(xObject[0])
-const hashMap = (xObject[0] === undefined) ? [{ logo: 'A', url: 'https://www.acfun.cn' }, { logo: 'B', url: 'https://www.bilibili.com' }] : xObject
+const siteData = localStorage.getItem('data')
+const dataObject = JSON.parse(siteData)    //读取要变成JSON对象进行操作
+const hashMap = dataObject || [{ logo: 'A', url: 'https://www.acfun.cn' }, { logo: 'B', url: 'https://www.bilibili.com' }]
 
 const simplifyUrl = (url) => {
     return url.replace('https://', '')
@@ -54,7 +53,7 @@ $('.icon').on('click', () => {
 
 window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)    //存储要将其转化为字符串的样式  GlobalEventHandlers.onbeforeunload
-    localStorage.setItem('x', string)
+    localStorage.setItem('data', string)
 }
 
 $(document).on('keypress', (e) => {

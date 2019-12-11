@@ -7,7 +7,17 @@ ol,ul{list-style: none;}
 img{max-width: 100%;max-height: 100%;}
 
 /*styles*/
-body{background: #ffffff;}
+.element::-webkit-scrollbar { width: 0 !important }
+body{background: #ffffff;
+     width: 100vw;
+     height: 100vh;
+     overflow-x:hidden ;
+     overflow-y: scroll;
+     background-image: url(daitu1.3b043b48.png);
+     background-repeat: no-repeat;
+     background-position:center;
+     background-size: 78% auto;
+}
 
 @media (min-width:500px){
 .globalHeader{
@@ -119,4 +129,4 @@ body{background: #ffffff;}
     
 }
 
-/*# sourceMappingURL=style.bf766f0a.css.map */
+/*# sourceMappingURL=style.07c24bef.css.map */

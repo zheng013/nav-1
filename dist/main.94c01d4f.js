@@ -120,17 +120,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"epB2":[function(require,module,exports) {
 var $siteList = $('.siteList');
 var $lastLi = $('li.last');
-var x = localStorage.getItem('x');
-var xObject = JSON.parse(x); //读取要变成JSON对象进行操作
+var siteData = localStorage.getItem('data');
+var dataObject = JSON.parse(siteData); //读取要变成JSON对象进行操作
 
-console.log(xObject[0]);
-var hashMap = xObject[0] === undefined ? [{
+var hashMap = dataObject || [{
   logo: 'A',
   url: 'https://www.acfun.cn'
 }, {
   logo: 'B',
   url: 'https://www.bilibili.com'
-}] : xObject;
+}];
 
 var simplifyUrl = function simplifyUrl(url) {
   return url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/, ''); // 删除 / 开头的内容
@@ -173,7 +172,7 @@ $('.icon').on('click', function () {
 window.onbeforeunload = function () {
   var string = JSON.stringify(hashMap); //存储要将其转化为字符串的样式  GlobalEventHandlers.onbeforeunload
 
-  localStorage.setItem('x', string);
+  localStorage.setItem('data', string);
 };
 
 $(document).on('keypress', function (e) {
@@ -186,4 +185,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ceecb04c.js.map
+//# sourceMappingURL=main.94c01d4f.js.map
