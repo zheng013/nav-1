@@ -1,12 +1,8 @@
 const $siteList = $('.siteList')
 const $lastLi = $('li.last')
-
 const siteData = localStorage.getItem('data')
 const dataObject = JSON.parse(siteData)    //读取要变成JSON对象进行操作
 const hashMap = dataObject || [{ logo: 'A', url: 'https://www.acfun.cn' }, { logo: 'B', url: 'https://www.bilibili.com' }]
-
-
-
 
 const simplifyUrl = (url) => {
     return url.replace('https://', '')
